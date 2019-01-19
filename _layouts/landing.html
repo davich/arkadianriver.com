@@ -58,7 +58,7 @@
           endif %}
 
         <!-- Two -->
-          <section id="landing_pages" class="wrapper alt style2">{%
+<!--           <section id="landing_pages" class="wrapper alt style2">{%
             assign sorted_pages = site.pages | sort:"id" %}{%
             for my_page in sorted_pages %}{%
               if my_page.title %}{%
@@ -81,7 +81,7 @@
                 endunless %}{%
               endif %}{%
             endfor %}
-          </section>
+          </section> -->
 
         <!-- Three -->{%
       if site.tags.featured %}
@@ -114,6 +114,8 @@
       endif %}
 
         <!-- CTA -->
+        {%
+      if false %}
           <section id="cta" class="wrapper style4">
             <div class="inner">
               <header>
@@ -125,7 +127,8 @@
                 <li><a href="{{ '/contact/' | prepend: site.baseurl }}" class="button fit special">Contact</a></li>
               </ul>
             </div>
-          </section>
+          </section>{%
+      endif %}
 
       {% include footer.html %}
 
